@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { MantineProvider } from "@mantine/core";
-import { HeaderSimple } from "./Header/header";
-import { FooterLinks } from "./Footer/footer";
-import { Subgrid } from "./Body/body";
+import { HeaderSimple } from "./header/header";
+import { FooterLinks } from "./footer/footer";
+import { Subgrid } from "./body/body";
 
 function App() {
   const menuitems = [
