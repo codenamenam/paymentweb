@@ -1,5 +1,6 @@
 import { SimpleGrid, Container, Flex, Box, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
+import { useNavigate } from "react-router-dom";
 
 export function Subgrid() {
   const isXs = useMediaQuery("(max-width: 36em)"); // Check for xs size
@@ -7,6 +8,8 @@ export function Subgrid() {
   const h1Style = {
     marginBottom: isXs ? "20px" : "30px", // Set different marginTop values based on xs size
   };
+
+  const navigate = useNavigate();
 
   return (
     <Container my="md">
@@ -33,6 +36,9 @@ export function Subgrid() {
                   : theme.colors.gray[1],
             },
           })}
+          onClick={() => {
+            navigate("/pay", { state: { price: 3000 } });
+          }}
         >
           <Text style={{ fontSize: 24 }}>1개월</Text>
           <Text style={{ fontSize: 18, fontWeight: "", color: "gray" }}>
@@ -58,6 +64,9 @@ export function Subgrid() {
                   : theme.colors.gray[1],
             },
           })}
+          onClick={() => {
+            navigate("/pay", { state: { price: 8000 } });
+          }}
         >
           <Text style={{ fontSize: 24 }}>3개월</Text>
           <Text style={{ fontSize: 18, fontWeight: "", color: "gray" }}>
@@ -84,6 +93,9 @@ export function Subgrid() {
                   : theme.colors.gray[1],
             },
           })}
+          onClick={() => {
+            navigate("/pay", { state: { price: 15000 } });
+          }}
         >
           <Text style={{ fontSize: 24 }}>6개월</Text>
           <Text style={{ fontSize: 18, fontWeight: "", color: "gray" }}>

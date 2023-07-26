@@ -4,6 +4,14 @@ import { MantineProvider } from "@mantine/core";
 import { HeaderSimple } from "./header/header";
 import { FooterLinks } from "./footer/footer";
 import { Subgrid } from "./body/body";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const menuitems = [
@@ -22,6 +30,9 @@ function App() {
       ],
     },
   ];
+  /**
+   * <Route path="/pay" element={<Checkout />}></Route>
+   */
 
   return (
     <>
