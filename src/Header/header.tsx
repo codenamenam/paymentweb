@@ -93,7 +93,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
       {" "}
       {/* Reduce marginBottom to adjust space */}
       <Container className={classes.header}>
-        <Image src="./Image/dopamine.png" width={100} height={50} />
+        <Image src="./dopamine.png" width={100} height={50} />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

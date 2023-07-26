@@ -160,7 +160,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <Image src="./Image/dopamine.png" width={100} height={50} />
+          <Image src="./dopamine.png" width={100} height={50} />
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
