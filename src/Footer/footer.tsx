@@ -145,7 +145,16 @@ export function FooterLinks({ data }: FooterLinksProps) {
     <footer className={classes.footer} style={{ padding: "30px" }}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <Image src="./dopamine.png" width={100} height={50} />
+          <Text
+            variant="gradient"
+            gradient={{ from: "indigo", to: "cyan", deg: 45 }}
+            sx={{ fontFamily: "Greycliff CF, sans-serif" }}
+            ta="center"
+            fz="xl"
+            fw={700}
+          >
+            도파민 디펜스
+          </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>

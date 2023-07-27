@@ -2,24 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import {
   loadPaymentWidget,
   PaymentWidgetInstance,
-  ANONYMOUS,
 } from "@tosspayments/payment-widget-sdk";
 import { nanoid } from "nanoid";
 import { useLocation } from "react-router-dom";
-import {
-  SimpleGrid,
-  Container,
-  Flex,
-  Box,
-  Text,
-  Button,
-  Center,
-} from "@mantine/core";
+import { Container, Flex, Button, Center } from "@mantine/core";
 
 import "../App.css";
-const clientKey = "test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq";
-//const clientKey = "test_ck_YPBal2vxj816OeJ6LJe35RQgOAND";
-//const customerKey = ANONYMOUS;
+const clientKey = "test_ck_7XZYkKL4Mrjzx20Mb0mr0zJwlEWR";
 const customerKey = "YbX2HuSlsC9uVJW6NMRMj";
 
 export default function Checkout() {

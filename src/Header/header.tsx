@@ -6,9 +6,10 @@ import {
   Group,
   Burger,
   rem,
-  Image,
+  Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -71,6 +72,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
+  const navigate = useNavigate();
 
   const items = links.map((link) => (
     <a
@@ -93,7 +95,23 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
       {" "}
       {/* Reduce marginBottom to adjust space */}
       <Container className={classes.header}>
-        <Image src="./dopamine.png" width={100} height={50} />
+        <div
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <Text
+            variant="gradient"
+            gradient={{ from: "indigo", to: "cyan", deg: 45 }}
+            sx={{ fontFamily: "Greycliff CF, sans-serif" }}
+            ta="center"
+            fz="xl"
+            fw={700}
+          >
+            도파민 디펜스
+          </Text>
+        </div>
+
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
