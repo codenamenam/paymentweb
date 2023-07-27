@@ -37,7 +37,7 @@ export function Subgrid() {
             },
           })}
           onClick={() => {
-            navigate("/pay", { state: { price: 3000 } });
+            navigate("/pay", { state: { price: 3000, peorid: "1개월" } });
           }}
         >
           <Text style={{ fontSize: 24 }}>1개월</Text>
@@ -65,7 +65,7 @@ export function Subgrid() {
             },
           })}
           onClick={() => {
-            navigate("/pay", { state: { price: 8000 } });
+            navigate("/pay", { state: { price: 8000, peorid: "3개월" } });
           }}
         >
           <Text style={{ fontSize: 24 }}>3개월</Text>
@@ -94,7 +94,7 @@ export function Subgrid() {
             },
           })}
           onClick={() => {
-            navigate("/pay", { state: { price: 15000 } });
+            navigate("/pay", { state: { price: 15000, peorid: "6개월" } });
           }}
         >
           <Text style={{ fontSize: 24 }}>6개월</Text>

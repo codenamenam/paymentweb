@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   loadPaymentWidget,
   PaymentWidgetInstance,
+  ANONYMOUS,
 } from "@tosspayments/payment-widget-sdk";
 import { nanoid } from "nanoid";
 import { useLocation } from "react-router-dom";
@@ -16,8 +17,9 @@ import {
 } from "@mantine/core";
 
 import "../App.css";
-
 const clientKey = "test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq";
+//const clientKey = "test_ck_YPBal2vxj816OeJ6LJe35RQgOAND";
+//const customerKey = ANONYMOUS;
 const customerKey = "YbX2HuSlsC9uVJW6NMRMj";
 
 export default function Checkout() {
@@ -27,6 +29,7 @@ export default function Checkout() {
   > | null>(null);
   const location = useLocation();
   const [price, setPrice] = useState(location.state?.price);
+  const [peorid, setPeorid] = useState(location.state?.peorid);
 
   useEffect(() => {
     (async () => {
@@ -71,9 +74,9 @@ export default function Checkout() {
                 //이전 페이지에서 정보 가져와야함
                 await paymentWidget?.requestPayment({
                   orderId: nanoid(),
-                  orderName: "토스 티셔츠 외 2건",
-                  customerName: "김토스",
-                  customerEmail: "customer123@gmail.com",
+                  orderName: "도파민 디펜스 " + peorid + " 구독",
+                  customerName: "익명",
+                  customerEmail: "",
                   successUrl: `${window.location.origin}/success`,
                   failUrl: `${window.location.origin}/fail`,
                 });

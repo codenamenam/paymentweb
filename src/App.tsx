@@ -16,11 +16,12 @@ import Checkout from "./pages/Checkout";
 function App() {
   const menuitems = [
     {
-      link: "/pay",
+      link: "/",
       label: "결제하기",
     },
   ];
 
+  //수정 - 주소 바꾸기
   const footeritems = [
     {
       title: "Website Map",
