@@ -142,31 +142,29 @@ export function FooterLinks({ data }: FooterLinksProps) {
   });
 
   return (
-    <footer className={classes.footer} style={{ padding: "0px" }}>
-      <Container className={classes.afterFooter} style={{ marginTop: "0px" }}>
-        <Text color="dimmed" size="sm">
-          14일 이내 변심 시 환불해드립니다. 14일 이내 변심 시 환불해드립니다.
-          14일 이내 변심 시 환불해드립니다. 14일 이내 변심 시 환불해드립니다.
-          14일 이내 변심 시 환불해드립니다. 14일 이내 변심 시 환불해드립니다.
-          14일 이내 변심 시 환불해드립니다.14일 이내 변심 시 환불해드립니다.
-          14일 이내 변심 시 환불해드립니다.14일 이내 변심 시 환불해드립니다.14일
-          이내 변심 시 환불해드립니다.14일 이내 변심 시 환불해드립니다.14일 이내
-          변심 시 환불해드립니다.14일 이내 변심 시 환불해드립니다.14일 이내 변심
-          시 환불해드립니다.14일 이내 변심 시 환불해드립니다.14일 이내 변심 시
-          환불해드립니다.14일 이내 변심 시 환불해드립니다.14일 이내 변심 시
-          환불해드립니다.14일 이내 변심 시 환불해드립니다.
-        </Text>
-      </Container>
-
+    <footer className={classes.footer} style={{ padding: "30px" }}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <Image src="./dopamine.png" width={100} height={50} />
+          <Text
+            variant="gradient"
+            gradient={{ from: "indigo", to: "cyan", deg: 45 }}
+            sx={{ fontFamily: "Greycliff CF, sans-serif" }}
+            ta="center"
+            fz="xl"
+            fw={700}
+          >
+            도파민 디펜스
+          </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2023 도파민디펜스. All rights reserved.
+          사업자등록번호: 747-35-01319 | 대표: 김선효
+          <br /> 상호명: 도파민디펜스 | 유선번호: 01055099750
+          <br />
+          주소: 서울특별시 용산구 효창원로69길 42-3(효창동)
+          <br />© 2023 도파민디펜스. All rights reserved.
         </Text>
       </Container>
     </footer>
