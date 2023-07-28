@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 import { Container, Flex, Button, Center } from "@mantine/core";
 
 import "../App.css";
-const clientKey = "test_ck_7XZYkKL4Mrjzx20Mb0mr0zJwlEWR";
+const clientKey = "test_ck_ADpexMgkW36LmKlJXzJrGbR5ozO0";
 const customerKey = "YbX2HuSlsC9uVJW6NMRMj";
 
 export default function Checkout() {
