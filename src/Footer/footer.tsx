@@ -160,7 +160,8 @@ export function FooterLinks({ data }: FooterLinksProps) {
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          사업자등록번호: 747-35-01319 | 대표: 김선효
+          사업자등록번호: 747-35-01319 | 통신판매업 신고번호: 2023-서울용산-1169
+          | 대표: 김선효
           <br /> 상호명: 도파민디펜스 | 유선번호: 01055099750
           <br />
           주소: 서울특별시 용산구 효창원로69길 42-3(효창동)
