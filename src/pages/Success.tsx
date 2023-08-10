@@ -5,7 +5,6 @@ import { Center, Flex, Container, Text } from "@mantine/core";
 
 export function SuccessPage() {
   const [searchParams] = useSearchParams();
-
   // 서버로 승인 요청
 
   return (

@@ -4,7 +4,13 @@ import { MantineProvider } from "@mantine/core";
 import { HeaderSimple } from "./header/header";
 import { FooterLinks } from "./footer/footer";
 import { Subgrid } from "./body/body";
-import { RouterProvider, BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  RouterProvider,
+  BrowserRouter,
+  Route,
+  Routes,
+  HashRouter,
+} from "react-router-dom";
 import Checkout from "./pages/Checkout";
 import { SuccessPage } from "./pages/Success";
 import { FailPage } from "./pages/Fail";
@@ -30,8 +36,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <MantineProvider withGlobalStyles withNormalizeCSS>
+      <MantineProvider withGlobalStyles withNormalizeCSS>
+        <BrowserRouter>
           <Routes>
             <Route
               path="/"
@@ -65,8 +71,8 @@ function App() {
             />
             <Route path="/pay" element={<Checkout />} />
           </Routes>
-        </MantineProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </MantineProvider>
     </>
   );
 }
